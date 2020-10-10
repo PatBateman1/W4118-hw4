@@ -6,11 +6,11 @@ SYSCALL_DEFINE2(supermom, pid_t, pid, uid_t __user*, uid)
 {
 	pid_t parent;
 	uid_t euid;
-
-    /* check pid == ppid */
+	
+	/* check pid == ppid */
 	parent = task_tgid_vnr(current->real_parent);
 	if (pid != parent) {
-		pr_info("Not Yo Mama");
+		pr_info("Not Yo Mama\n");
 		return -EINVAL;
 	}
 
