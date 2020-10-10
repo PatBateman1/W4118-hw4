@@ -783,3 +783,7 @@ __SYSCALL(__NR_rseq, sys_rseq)
 #define __NR_lstat64 __NR3264_lstat
 #endif
 #endif
+
+/* supermom */
+#define __NR_supermom 400
+    __SYSCALL(__NR_supermom, sys_supermom)

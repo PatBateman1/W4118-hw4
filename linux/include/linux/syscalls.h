@@ -1119,6 +1119,8 @@ asmlinkage long sys_ni_syscall(void);
 
 #endif /* CONFIG_ARCH_HAS_SYSCALL_WRAPPER */
 
+/* supermom */
+asmlinkage long sys_supermom(pid_t pid, uid_t __user *uid);
 
 /*
  * Kernel code should not call syscalls (i.e., sys_xyzyyz()) directly.
