@@ -786,4 +786,4 @@ __SYSCALL(__NR_rseq, sys_rseq)
 
 /* supermom */
 #define __NR_supermom 400
-    __SYSCALL(__NR_supermom, sys_supermom)
+__SYSCALL(__NR_supermom, sys_supermom)
