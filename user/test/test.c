@@ -3,7 +3,7 @@
 #include <errno.h>
 
 /*
- * testing program for part3
+ * testing program for part4
  */
 int main(void)
 {
