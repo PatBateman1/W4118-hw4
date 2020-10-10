@@ -23,8 +23,8 @@ int main(void)
 	printf("errno: %d\n", errno);
 
 	res = syscall(400, ppid + 143, &uid);
-	printf("fail: %d\n", res);
-	printf("errno: %d\n", errno);
+	printf("fail: (%ld)\n", res);
+	printf("errno: (%ld)\n", errno);
 
 	return 0;
 }
