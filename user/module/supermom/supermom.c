@@ -31,8 +31,7 @@ long helper(pid_t pid, uid_t __user *uid)
 	if (euid == 0) {
 		count++;
 		return 0;
-	}
-	else
+	} else
 		return -EACCES;
 }
 
@@ -40,8 +39,9 @@ int simple_init(void)
 {
 	printk(KERN_INFO "Loading %s\n", MODULE_NAME);
 	func_ptr = helper;
-	if ((slog = debugfs_create_dir("superlog", NULL)) == NULL)
-		printk(KERN_WARNING "debugfs_create_dir() failed\n");
+	slog = debugfs_create_dir("superlog", NULL)
+	if (slog == NULL)
+		pr_info("debugfs_create_dir() failed\n");
 	count = 0;
 	debugfs_create_u32("success", 0644, slog, &count);
 	return 0;
